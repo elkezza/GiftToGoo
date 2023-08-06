@@ -14,7 +14,7 @@ public class LocationService {
     @Autowired
     private LocationRepository locationRepository;
 
-    public List<Location> getAllItems() {
+    public List<Location> getAllLocations() {
         return locationRepository.findAll();
     }
 
