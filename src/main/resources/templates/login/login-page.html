@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--<html lang="en">-->
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="/css/login-style.css">
+    <meta charset="UTF-8">
+    <title>Login Pag</title>
 </head>
 <body>
-$END$
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>Gift To Goo<br> Login Page</h2>
+    <p>Login from here to access.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form action="/main/process-login" method="post">
+        <div class="form-group">
+          <label>User Name</label>
+          <input type="text" class="form-control" name="usernameOrEmail" placeholder="Username or Email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-black">Login</button>
+        <!-- Error Message Display -->
+        <div th:if="${error}" class="alert alert-danger" role="alert">
+          <p th:text="${error}">Error message here</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
+
+
+<!--reference: https://bootsnipp.com/snippets/7nk08-->
