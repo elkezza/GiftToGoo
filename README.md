@@ -20,5 +20,5 @@ GiftToGo is a dynamic web application that allows companies to promote and list 
 - **Backend Framework:** Spring Boot
 - **ORM:** Spring Data JPA
 - **Frontend:** Thymeleaf template engine
-- **Database:** [Specify the DB you're using, e.g., H2, MySQL]
+- **Database:** Postgres
 - **Other Dependencies:** Lombok for reducing boilerplate code, Spring Web for web functionalities, etc.
